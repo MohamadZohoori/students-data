@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Information about {{ classmates.firstname }} {{ classmates.lastname }}
+{% endblock %}
+
+
+{% block content %}
+ <!---->
+
+  <h1>{{ classmates.firstname }} {{ classmates.lastname }}</h1>
+
+  {% load static %}<img src="{% static 'ManAvatar.jpg' %}" style="width:10%">
+  
+  <p>Phone {{ classmates.phone }}</p>
+
+  <p>Email Address: {{ classmates.email }}</p>
+  
+  <p>Back to <a href={% url 'index' %}>Home</a></p>
+  
+{% endblock %}
